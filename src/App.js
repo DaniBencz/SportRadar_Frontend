@@ -7,8 +7,7 @@ function App() {
   const [stats, setStats] = useState({});
 
   const getStats = () => {
-    // fetch(`${window.location.origin}/matches`)
-    fetch('http://localhost:4040/matches')
+    fetch(`${window.location.origin}/matches`)
       .then(res => res.json())
       .then(stats => setStats(stats))
       .catch();
