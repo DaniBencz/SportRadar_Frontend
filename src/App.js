@@ -1,23 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect } from 'react';
+import Stats from './components/Stats';
 
 function App() {
+  const [stats, setStats] = useState({});
+
+  const getStats = () => {
+    // fetch(`${window.location.origin}/matches`)
+    fetch('http://localhost:4040/matches')
+      .then(res => res.json())
+      .then(stats => setStats(stats))
+      .catch();
+  };
+
+  useEffect(() => {
+    getStats();
+    setInterval(() => getStats(), 600 * 1000);
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <Stats stats={stats}></Stats>
     </div>
   );
 }
