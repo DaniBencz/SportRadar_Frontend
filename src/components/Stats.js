@@ -4,7 +4,7 @@ import Messi from '../Messi.jpeg'
 const Stats = ({ stats }) => {
   return (
     <div id="stats">
-      <img class="stats-bg" src={Messi} style={{ width: "500px" }} />
+      <img className="stats-bg" src={Messi} style={{ width: "500px", zIndex: "-1" }} alt="Lionel Messi"/>
       {Object.keys(stats).map((tournamentName, index) => {
         return (
           <div key={index} >

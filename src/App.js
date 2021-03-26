@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={banner} style={{ width: "500px" }} />
+        <img src={banner} style={{ width: "500px"}} alt="sportradar banner"/>
       </header>
       <Stats stats={stats}></Stats>
     </div>
