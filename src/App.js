@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import banner from './banner.jpg';
 import './App.css';
 import { useState, useEffect } from 'react';
 import Stats from './components/Stats';
@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={banner} style={{ width: "500px" }} />
       </header>
       <Stats stats={stats}></Stats>
     </div>
