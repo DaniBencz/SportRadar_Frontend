@@ -5,37 +5,32 @@
   border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header {
+  background-image: url(banner.jpg);
+  background-size: cover;
+  height: 90px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-h3 {
-  margin-top: 7px !important;
-  text-align: center;
-}
-
-#stats {
+#tournaments-container {
   padding: 0 3px 3px;
   overflow: hidden;
   position: relative;
 }
 
-.stats-bg {
+.tournaments-bg {
+  width: 500px;
+  z-index: -1;
   opacity: 0.1;
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
+}
+
+#tournaments-container h3 {
+  margin-top: 7px !important;
+  text-align: center;
+  margin: 3px;
 }
 
 table {
@@ -55,4 +50,12 @@ td div {
 
 td div p {
   margin: 2px;
+}
+
+.match-time {
+  width: 105px;
+}
+
+.teams {
+  width: 190px;
 }

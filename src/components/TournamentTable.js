@@ -1,4 +1,4 @@
-const Tournament = ({ tournamentData }) => {
+const TournamentTable = ({ tournamentData }) => {
   return (
     <table>
       <thead>
@@ -11,11 +11,13 @@ const Tournament = ({ tournamentData }) => {
       </thead>
       <tbody>
         {tournamentData.map((data, index) => {
-          const { dateAndTime, teams, score, events } = data;
+          const { uts, teams, score, events } = data;
+          const date = new Date(uts * 1000);
+          const dateString = `${date.getMonth() + 1} / ${date.getDate()} - ${date.getHours()}:${date.getMinutes()}`;
           return (
             <tr key={index}>
-              <td style={{ width: "105px" }}>{dateAndTime}</td>
-              <td style={{ width: "190px" }}>{teams.home} - {teams.away}</td>
+              <td className="match-time">{dateString}</td>
+              <td className="teams">{teams.home} - {teams.away}</td>
               <td>{score.home || 0} - {score.away || 0}</td>
               <td><div>{events.map((event, i) => {
                 return <p key={i}>{event}</p>;
@@ -27,4 +29,4 @@ const Tournament = ({ tournamentData }) => {
     </table>
   );
 };
-export default Tournament;
+export default TournamentTable;
