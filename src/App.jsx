@@ -6,9 +6,9 @@ function App() {
   const [stats, setStats] = useState({});
 
   const getResults = () => {
-    fetch(`/results`)
-      .then(res => res.json())
-      .then(stats => setStats(stats))
+    fetch('/results')
+      .then((res) => res.json())
+      .then((res) => setStats(res))
       .catch();
   };
 
@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <header className="header" />
-      <Stats stats={stats}></Stats>
+      <Stats stats={stats} />
     </div>
   );
 }
