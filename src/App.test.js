@@ -1,4 +1,4 @@
-import { render, screen, queryByAttribute } from '@testing-library/react';
+import { render, queryByAttribute } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import App from './App';
 

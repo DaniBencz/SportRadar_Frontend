@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const TournamentTable = ({ matches }) => (
   <table>
     <thead>
@@ -43,4 +45,9 @@ const TournamentTable = ({ matches }) => (
     </tbody>
   </table>
 );
+
+TournamentTable.protoTypes = {
+  matches: PropTypes.arrayOf(PropTypes.object),
+};
+
 export default TournamentTable;

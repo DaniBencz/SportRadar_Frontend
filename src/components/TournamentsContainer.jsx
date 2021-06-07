@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import TournamentTable from './TournamentTable';
 import Messi from '../Messi.jpeg';
 
@@ -12,4 +13,14 @@ const TournamentsContainer = ({ stats }) => (
     ))}
   </div>
 );
+
+TournamentsContainer.propTypes = {
+  stats: PropTypes.shape({
+    [PropTypes.number]: PropTypes.shape({
+      name: PropTypes.string,
+      matches: PropTypes.arrayOf(PropTypes.object),
+    }),
+  }).isRequired,
+};
+
 export default TournamentsContainer;
