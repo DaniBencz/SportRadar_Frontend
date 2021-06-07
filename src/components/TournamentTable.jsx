@@ -46,8 +46,8 @@ const TournamentTable = ({ matches }) => (
   </table>
 );
 
-TournamentTable.protoTypes = {
-  matches: PropTypes.arrayOf(PropTypes.object),
+TournamentTable.propTypes = {
+  matches: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default TournamentTable;

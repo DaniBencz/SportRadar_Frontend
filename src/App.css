@@ -11,6 +11,11 @@
   height: 90px;
 }
 
+.github-icon {
+  height: 50%;
+  margin: 4%;
+}
+
 #tournaments-container {
   padding: 0 3px 3px;
   overflow: hidden;
